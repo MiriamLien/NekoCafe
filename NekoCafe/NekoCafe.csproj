@@ -1,0 +1,402 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{044F817A-429F-413E-AC99-B53BDD569A6C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NekoCafe</RootNamespace>
+    <AssemblyName>NekoCafe</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account_Info.aspx" />
+    <Content Include="BackAdmin\adminAccount.aspx" />
+    <Content Include="BackAdmin\adminCats.aspx" />
+    <Content Include="BackAdmin\adminHome.aspx" />
+    <Content Include="BackAdmin\adminMenu.aspx" />
+    <Content Include="BackAdmin\adminNews.aspx" />
+    <Content Include="BackAdmin\adminPermissions.aspx" />
+    <Content Include="BackAdmin\adminReservation.aspx" />
+    <Content Include="BackAdmin\adminSetting.aspx" />
+    <Content Include="calendar\ca.html" />
+    <Content Include="calendar\locales-all.js" />
+    <Content Include="calendar\main.css" />
+    <Content Include="calendar\main.js" />
+    <Content Include="Cats.aspx" />
+    <Content Include="css\Calendar.css" />
+    <Content Include="css\EventStyle.css" />
+    <Content Include="css\ReservationStyle.css" />
+    <Content Include="Event.aspx" />
+    <Content Include="FileDownload\20220404142018767665_2081.png" />
+    <Content Include="FileDownload\20220404183448766879_4862.png" />
+    <Content Include="FileDownload\20220404184406200323_6561.png" />
+    <Content Include="FileDownload\20220404185044831268_0947.png" />
+    <Content Include="FileDownload\20220404191156147543_1877.gif" />
+    <Content Include="FileDownload\20220404191943871837_2047.gif" />
+    <Content Include="Global.asax" />
+    <Content Include="img\Account_Info\cat.jpg" />
+    <Content Include="img\Admin\cat2.jpg" />
+    <Content Include="img\cats\bc.jpg" />
+    <Content Include="img\cats\bc.png" />
+    <Content Include="img\cats\cat-home.png" />
+    <Content Include="img\cats\cat-home2.png" />
+    <Content Include="img\cats\dc.jpg" />
+    <Content Include="img\cats\dc.png" />
+    <Content Include="img\cats\dmc.jpg" />
+    <Content Include="img\cats\dmc.png" />
+    <Content Include="img\cats\oc.jpg" />
+    <Content Include="img\cats\oc.png" />
+    <Content Include="img\cats\oc2-1.png" />
+    <Content Include="img\cats\oc2-2.png" />
+    <Content Include="img\cats\oc2.jpg" />
+    <Content Include="img\cats\sc.jpg" />
+    <Content Include="img\cats\sc.png" />
+    <Content Include="img\cats\wc.jpg" />
+    <Content Include="img\cats\wc.png" />
+    <Content Include="img\home\bg-lg-cat.png" />
+    <Content Include="img\home\bg-md-cat.png" />
+    <Content Include="img\home\bg-sm-cat.png" />
+    <Content Include="img\home\paw.png" />
+    <Content Include="img\Main\cats.png" />
+    <Content Include="img\Main\cat_sky.gif" />
+    <Content Include="img\Main\floor.png" />
+    <Content Include="img\Main\logo.png" />
+    <Content Include="img\Main\menu.png" />
+    <Content Include="img\Main\news.png" />
+    <Content Include="img\Main\reservation.png" />
+    <Content Include="img\menu\3Dcat.jpg" />
+    <Content Include="img\menu\catcake.jpg" />
+    <Content Include="img\menu\catcookies.png" />
+    <Content Include="img\menu\catcookies3.png" />
+    <Content Include="img\menu\coffeeLogo.png" />
+    <Content Include="img\menu\dessertLogo.png" />
+    <Content Include="img\menu\NEKOchocolate.jpg" />
+    <Content Include="img\menu\NEKOdonut.jpg" />
+    <Content Include="img\menu\NEKOwaffle.jpg" />
+    <Content Include="img\reservation\coffee.gif" />
+    <Content Include="img\reservation\dessert.png" />
+    <Content Include="img\reservation\other.gif" />
+    <Content Include="img\reservation\photo02.jpg" />
+    <Content Include="img\reservation\tea.png" />
+    <Content Include="img\room\0261546886b25b221f390ca0984049e0.jpg" />
+    <Content Include="img\room\41fcc8f532ea9335f1e5b86f15fd5fd2.jpg" />
+    <Content Include="img\room\6d822bd87a8e53037b3f93238b33fa5f.jpg" />
+    <Content Include="img\room\8f7873830a6d38e6a6e128d644bd8516.jpg" />
+    <Content Include="img\room\9248e3e6799e7c13a9d2eaf889eab6cc.jpg" />
+    <Content Include="img\room\c0c262b60577461900b572421525bb2c.jpg" />
+    <Content Include="img\room\dd685c876d791e84c6075b2b24c3785e.jpg" />
+    <Content Include="Login.aspx" />
+    <Content Include="Menu.aspx" />
+    <Content Include="index.aspx" />
+    <Content Include="NewAccount.aspx" />
+    <Content Include="ReservationPage.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account_Info.aspx.cs">
+      <DependentUpon>Account_Info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account_Info.aspx.designer.cs">
+      <DependentUpon>Account_Info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackAdmin\adminAccount.aspx.cs">
+      <DependentUpon>adminAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackAdmin\adminAccount.aspx.designer.cs">
+      <DependentUpon>adminAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackAdmin\adminCats.aspx.cs">
+      <DependentUpon>adminCats.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackAdmin\adminCats.aspx.designer.cs">
+      <DependentUpon>adminCats.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackAdmin\adminHome.aspx.cs">
+      <DependentUpon>adminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackAdmin\adminHome.aspx.designer.cs">
+      <DependentUpon>adminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackAdmin\adminMenu.aspx.cs">
+      <DependentUpon>adminMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackAdmin\adminMenu.aspx.designer.cs">
+      <DependentUpon>adminMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackAdmin\adminNews.aspx.cs">
+      <DependentUpon>adminNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackAdmin\adminNews.aspx.designer.cs">
+      <DependentUpon>adminNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackAdmin\adminPermissions.aspx.cs">
+      <DependentUpon>adminPermissions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackAdmin\adminPermissions.aspx.designer.cs">
+      <DependentUpon>adminPermissions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackAdmin\adminReservation.aspx.cs">
+      <DependentUpon>adminReservation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackAdmin\adminReservation.aspx.designer.cs">
+      <DependentUpon>adminReservation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackAdmin\adminSetting.aspx.cs">
+      <DependentUpon>adminSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackAdmin\adminSetting.aspx.designer.cs">
+      <DependentUpon>adminSetting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackAdmin\index.Master.cs">
+      <DependentUpon>index.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackAdmin\index.Master.designer.cs">
+      <DependentUpon>index.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CatCafe.ORM\Account.cs" />
+    <Compile Include="CatCafe.ORM\Bulletin.cs" />
+    <Compile Include="CatCafe.ORM\Cat.cs" />
+    <Compile Include="CatCafe.ORM\CatBreed.cs" />
+    <Compile Include="CatCafe.ORM\CatState.cs" />
+    <Compile Include="CatCafe.ORM\ContextModel.cs" />
+    <Compile Include="CatCafe.ORM\Item.cs" />
+    <Compile Include="CatCafe.ORM\ItemClass.cs" />
+    <Compile Include="CatCafe.ORM\MemberInfo.cs" />
+    <Compile Include="CatCafe.ORM\Order.cs" />
+    <Compile Include="CatCafe.ORM\OrderItem.cs" />
+    <Compile Include="CatCafe.ORM\Picture.cs" />
+    <Compile Include="CatCafe.ORM\Reservation.cs" />
+    <Compile Include="CatCafe.ORM\sysdiagram.cs" />
+    <Compile Include="CatCafe.ORM\Welfare.cs" />
+    <Compile Include="Cats.aspx.cs">
+      <DependentUpon>Cats.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cats.aspx.designer.cs">
+      <DependentUpon>Cats.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Event.aspx.cs">
+      <DependentUpon>Event.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Event.aspx.designer.cs">
+      <DependentUpon>Event.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\AccountHelper.cs" />
+    <Compile Include="Helpers\configHelper.cs" />
+    <Compile Include="Helpers\CookieHelper.cs" />
+    <Compile Include="Helpers\FileHelper.cs" />
+    <Compile Include="Helpers\Logger.cs" />
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\AccountManager.cs" />
+    <Compile Include="Managers\BulletinManager.cs" />
+    <Compile Include="Managers\CatBreedManager.cs" />
+    <Compile Include="Managers\CatManager.cs" />
+    <Compile Include="Managers\CatStateManager.cs" />
+    <Compile Include="Managers\ItemClassManager.cs" />
+    <Compile Include="Managers\ItemManager.cs" />
+    <Compile Include="Managers\MemberManager.cs" />
+    <Compile Include="Managers\NewsFromBulletinManager.cs" />
+    <Compile Include="Managers\OrderItemManager.cs" />
+    <Compile Include="Managers\OrderManager.cs" />
+    <Compile Include="Managers\PermissionsManager.cs" />
+    <Compile Include="Managers\PictureManager.cs" />
+    <Compile Include="Managers\ReservationManager.cs" />
+    <Compile Include="Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ALModel.cs" />
+    <Compile Include="Models\AccountModel.cs" />
+    <Compile Include="Models\ArticleModel.cs" />
+    <Compile Include="Models\BPModel.cs" />
+    <Compile Include="Models\BulletinModel.cs" />
+    <Compile Include="Models\CatBreedModel.cs" />
+    <Compile Include="Models\CatModel.cs" />
+    <Compile Include="Models\CatStateModel.cs" />
+    <Compile Include="Models\CCModel.cs" />
+    <Compile Include="Models\ItemAndPriceModel.cs" />
+    <Compile Include="Models\ItemModel.cs" />
+    <Compile Include="Models\MemberInfoModel.cs" />
+    <Compile Include="Models\MRModel.cs" />
+    <Compile Include="Models\OIModel.cs" />
+    <Compile Include="Models\OrderModel.cs" />
+    <Compile Include="Models\ORModel.cs" />
+    <Compile Include="Models\PictureModel.cs" />
+    <Compile Include="Models\ReservationModel.cs" />
+    <Compile Include="Models\WelfareModel.cs" />
+    <Compile Include="Models\OrderItemModel.cs" />
+    <Compile Include="NewAccount.aspx.cs">
+      <DependentUpon>NewAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewAccount.aspx.designer.cs">
+      <DependentUpon>NewAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReservationPage.aspx.cs">
+      <DependentUpon>ReservationPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReservationPage.aspx.designer.cs">
+      <DependentUpon>ReservationPage.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Main.Master" />
+    <Content Include="BackAdmin\index.Master" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="js\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61306</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49907/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此專案參考這部電腦上所缺少的 NuGet 套件。請啟用 NuGet 套件還原，以下載該套件。如需詳細資訊，請參閱 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的檔案是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

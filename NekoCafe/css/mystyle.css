@@ -1,0 +1,85 @@
+/*index.html*/
+body{
+    font-family: 'DotGothic16',cursive;
+    background-color: rgb(250, 250, 146);
+}
+
+#header {
+    position: fixed;
+    width: auto;
+    border: 1px solid rgb(255, 0, 0);
+}
+
+.bgc-header {
+    background-color: #53d7e6;
+}
+
+.bgc-hamburger {
+    background-color: #358c96;
+}
+
+@keyframes animatedBackground {
+    0% {
+        background-position: 0px 0;
+    }
+
+    100% {
+        background-position: 1480px 0;
+    }
+}
+
+#scroll {
+    background-image: url(../img/Main/floor.png);
+    background-repeat: repeat-x;
+    animation: animatedBackground 24s linear infinite;
+    height: 50px;
+}
+
+/*home.html*/
+#header-space-home {
+    height: 625px;
+}
+
+.bgc-content {
+    background-color: rgb(253, 253, 101);
+    background-image: url(../img/home/bg-lg-cat.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+}
+
+#hand-img {
+    position: relative;
+    top: -50px;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .bgc-content {
+        background-image: url(../img/home/bg-md-cat.png);
+    }
+
+    #hand-img {
+        top: -50px;
+        left: 250px;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .bgc-content {
+        background-image: url(../img/home/bg-sm-cat.png);
+    }
+
+    #hand-img {
+        top: -50px;
+        left: 200px;
+        width: 50%;
+    }
+}
+
+.bgc-content2 {
+    background-color: rgb(253, 227, 139);
+    border: 8px solid black;
+}

@@ -1,0 +1,108 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="index.master.cs" Inherits="NekoCafe.BackAdmin.index" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>管理人's Page</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" />
+    <!-- latest -->
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <script src="js/bootstrap.js"></script>
+    <!--套用jQuery-->
+    <script src="js/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: 'DotGothic16', cursive;
+            background-color: rgb(250, 250, 146);
+        }
+
+        #adminTitleDiv {
+            background-color: #ffad60;
+            padding-top: 10px;
+        }
+
+        #adminpicDiv {
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+
+        #adminTitle {
+            font-size: 30px;
+        }
+
+        #adminpic2 {
+            width: 120px;
+            height: 120px;
+        }
+
+        #adminMain1,
+        .adminMain2 {
+            float: left;
+        }
+
+        #adminMain1 {
+            width: 260px;
+            padding-left: 70px;
+            padding-top: 20px;
+        }
+
+        .adminMain2 {
+            padding-left: 60px;
+            padding-top: 20px;
+        }
+
+        #dlAllList{
+            margin-left:40px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12" id="adminTitleDiv">
+                    <h2 id="adminTitle" align="center">Administration System</h2>
+                    <div align="right"><a href="adminHome.aspx">ホーム</a> │ <a href="#" id="logout" runat="server" onserverclick="logout_ServerClick">ログアウト</a></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div id="adminMain1">
+                        <div align="center" id="adminpicDiv">
+                            <img src="../img/Admin/cat2.jpg" id="adminpic2"><br>
+                            <p>Admin</p>
+                        </div>
+                        <dl id="dlAllList">
+                            <dd><a href="adminAccount.aspx">アカウント管理</a></dd>
+                            <br />
+                            <dd><a href="adminReservation.aspx">予約管理</a></dd>
+                            <br />
+                            <dd><a href="adminCats.aspx">ネコ情報管理</a></dd>
+                            <br />
+                            <dd><a href="adminNews.aspx">お知らせ・記事一覧</a></dd>
+                            <br />
+                            <dd><a href="adminMenu.aspx">メニュー管理</a></dd>
+                            <br />
+                            <dd><a href="adminSetting.aspx">設定</a></dd>
+                            <br />
+                            <dd><a id="linkPermissions" href="adminPermissions.aspx" runat="server">権限管理</a></dd>
+                        </dl>
+                    </div>
+                    <div class="adminMain2">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</body>
+</html>

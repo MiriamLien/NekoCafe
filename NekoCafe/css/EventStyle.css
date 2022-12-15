@@ -1,0 +1,92 @@
+﻿/*看一下邊框*/
+div{
+    border: 0px solid #000000;
+}
+/*最上層的div*/
+#topDiv {
+    width: 100%;
+    height: 200px;
+}
+
+/*左邊那塊*/
+#side {
+    margin-top: 20px;
+    height: auto;
+    border: 0px solid #000000;
+}
+
+.sideTitle {
+    box-shadow: 5px 5px 5px #000000;
+    padding : 0;
+}
+
+    .sideTitle:hover {
+        /*background-color: #dac8f0;*/
+    }
+
+    .sideTitle:active {
+        box-shadow: -5px -5px 5px #000000;
+        /*background-color: #c2a4e7;*/
+    }
+
+/*右邊的大塊div*/
+#picPlace {
+    display: none;
+}
+
+.whiteBg {
+    background-color: #ffb6b9;
+    box-shadow: 5px 5px 5px #000000;
+}
+
+/*圖片div*/
+#imgDiv {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.imgs {
+    height: 100%;
+    width: 100%;
+}
+
+/*文章那塊Div*/
+#WritingDiv {
+    display: none;
+    margin-bottom: 30px;
+    background-color: #81dfab;
+    box-shadow: 5px 5px 5px #000000;
+}
+
+/*文章標題*/
+#WritingTitle {
+    text-align: center;
+}
+
+/*就是body 改背景色用*/
+body {
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 22px;
+}
+
+/*文章內文*/
+#Writing1{
+    display:none;
+}
+#Writing2 {
+    display: none;
+}
+#Writing3 {
+    display: none;
+}
+#Writing4 {
+    display: none;
+}
+/*測試一下版面大小*/
+@media screen and (max-width:767px) {
+    h1 {
+        color: darkgoldenrod
+    }
+}

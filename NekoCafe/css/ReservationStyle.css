@@ -1,0 +1,162 @@
+﻿/*看一下邊框*/
+div {
+    border: 0px solid #000000;
+}
+
+/*最上面的div*/
+#header-space-reservation {
+    height: 150px;
+}
+
+/*那個大張的圖片*/
+#mainImage {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+#mainImage img {
+    width: 100%;
+    height: auto;
+}
+
+/*小標題div*/
+.TitleDiv {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/*小標題文字*/
+.titles {
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 1px;
+}
+
+/*分隔線*/
+hr.style-one {
+    border: 0;
+    height: 3px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+.context {
+    text-align: center;
+}
+/*地圖旁邊的標題*/
+.smTitles {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+/*地圖旁邊的內容s*/
+.smContent {
+    font-size: 18px;
+    text-align: left;
+    padding-left: 50px;
+}
+/*#content,#info,#booking,{
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }*/
+#space {
+    height: 50px;
+}
+
+.subTitle {
+    text-align: center;
+}
+
+/*菜單那塊*/
+#menuDiv {
+    margin: 0px auto;
+    margin-top: -5px;
+    background-color: #aca1cf;
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 50%;
+    border: 4px solid #685e8c;
+    border-radius: 2%;
+    box-shadow: 5px 5px 5px #4b426e;
+}
+
+    #menuDiv #menuImg1 {
+        width: 80px;
+        margin: 20px auto;
+    }
+
+    #menuDiv #menuImg2 {
+        width: 50px;
+        margin: 10px auto;
+    }
+
+    #menuDiv #menuImg3 {
+        width: 80px;
+        margin: 10px auto;
+    }
+
+    #menuDiv #menuImg4 {
+        width: 40px;
+        margin: 10px auto;
+    }
+
+/*點餐下拉選單*/
+.menuDDL {
+    width: 250px;
+    margin: 10px;
+    text-align: center;
+    font-size:18px;
+}
+
+.menuTextBox {
+    width: 50px;
+    margin: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#InfoDiv {
+    float: left;
+    left: 50px;
+    margin: 0px auto;
+    margin-top: 50px;
+    background-color: #aca1cf;
+    text-align: left;
+    font-size: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 70%;
+    border: 4px solid #685e8c;
+    border-radius: 2%;
+    box-shadow: 5px 5px 5px #4b426e;
+}
+
+
+@media screen and (max-width:990px) {
+    #map{
+        width:100%;
+    }
+    #menuDiv {
+        width: 80%;
+    }
+    
+}
+
+@media screen and (max-width:780px) {
+    #menuDiv {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:1400px) {
+    
+}
