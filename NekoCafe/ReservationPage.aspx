@@ -170,9 +170,9 @@
 
         /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-        #map {
+        /* #map {
             height: 100%;
-        }
+        } */
 
         /* Optional: Makes the sample page fill the window. */
         html,
@@ -228,9 +228,10 @@
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12">
                 <div id="map"></div>
-                <script
+                <%--<script
                     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBA9A_Ry9G67EMNHQHYwh3aAE9ubAkaLdU&callback=initMap&v=weekly&channel=2"
-                    async></script>
+                    async></script>--%>
+                <iframe width="600" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src=https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=屏東縣琉球郷信義路50號&z=16&output=embed&t=></iframe>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12">
                 <div>
